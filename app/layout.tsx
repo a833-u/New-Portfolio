@@ -1,12 +1,17 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+import dynamic from 'next/dynamic';
 import './globals.css';
 import { ThemeProvider } from '@/lib/themeContext';
 import Header from '@/components/navigation/Header';
 import Footer from '@/components/navigation/Footer';
-import PortfolioGradientWaves from '@/components/ui/PortfolioGradientWaves';
 import PageTransition from '@/components/ui/PageTransition';
 import CinematicPreloader from '@/components/ui/CinematicPreloader';
+
+// Dynamic import for WebGL background to reduce initial bundle evaluation overhead
+const PortfolioGradientWaves = dynamic(
+  () => import('@/components/ui/PortfolioGradientWaves')
+);
 
 const poppins = Poppins({
   subsets: ['latin'],

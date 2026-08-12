@@ -36,9 +36,9 @@ const hexToRgb = (hex: string): [number, number, number] => {
 };
 
 const detailToSteps = (detail: GradientWavesDetail): number => {
-  if (detail === 'low') return 40.0;
-  if (detail === 'high') return 110.0;
-  return 70.0;
+  if (detail === 'low') return 30.0;
+  if (detail === 'high') return 75.0;
+  return 48.0;
 };
 
 const vertex = `#version 300 es
@@ -93,7 +93,7 @@ float plasma(vec3 r, vec2 freq, vec4 tc) {
 
 float raymarch(vec3 pos, vec3 dir, vec2 freq, vec4 tc) {
   float dist = 0.0;
-  for (int i = 0; i < 128; i++) {
+  for (int i = 0; i < 96; i++) {
     if (float(i) >= uSteps) break;
     float dscene = plasma(pos + dist * dir, freq, tc);
     if (abs(dscene) < 0.1) break;
@@ -197,7 +197,7 @@ const GradientWaves: React.FC<GradientWavesProps> = ({
         alpha: true,
         premultipliedAlpha: true,
         antialias: false,
-        dpr: Math.min(window.devicePixelRatio || 1, 2)
+        dpr: Math.min(window.devicePixelRatio || 1, 1.5)
       });
     } catch {
       return;
@@ -228,7 +228,7 @@ const GradientWaves: React.FC<GradientWavesProps> = ({
         uZoom: { value: 1.0 },
         uHeight: { value: 5.5 },
         uFogDepth: { value: 15 },
-        uSteps: { value: 70.0 },
+        uSteps: { value: 48.0 },
         uBrightness: { value: 1.0 },
         uOpacity: { value: 1.0 },
         uGrain: { value: 1.0 },
@@ -279,17 +279,22 @@ const GradientWaves: React.FC<GradientWavesProps> = ({
     let isVisible = true;
     let isPageVisible = !document.hidden;
     const t0 = performance.now();
+    let lastRenderTime = 0;
 
     const loop = (t: number) => {
-      (program.uniforms.iTime as { value: number }).value = (t - t0) * 0.001;
-      const tx = enableMouseRef.current ? targetMouse[0] : 0.5;
-      const ty = enableMouseRef.current ? targetMouse[1] : 0.5;
-      currentMouse[0] += 0.05 * (tx - currentMouse[0]);
-      currentMouse[1] += 0.05 * (ty - currentMouse[1]);
-      const m = (program.uniforms.uMouse as { value: Float32Array }).value;
-      m[0] = currentMouse[0];
-      m[1] = currentMouse[1];
-      renderer.render({ scene: mesh });
+      // FPS throttling: Cap at ~45 FPS (22ms interval) to save CPU/battery & reduce TBT
+      if (t - lastRenderTime >= 22) {
+        lastRenderTime = t;
+        (program.uniforms.iTime as { value: number }).value = (t - t0) * 0.001;
+        const tx = enableMouseRef.current ? targetMouse[0] : 0.5;
+        const ty = enableMouseRef.current ? targetMouse[1] : 0.5;
+        currentMouse[0] += 0.05 * (tx - currentMouse[0]);
+        currentMouse[1] += 0.05 * (ty - currentMouse[1]);
+        const m = (program.uniforms.uMouse as { value: Float32Array }).value;
+        m[0] = currentMouse[0];
+        m[1] = currentMouse[1];
+        renderer.render({ scene: mesh });
+      }
       raf = requestAnimationFrame(loop);
     };
 
