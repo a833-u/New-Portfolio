@@ -20,17 +20,28 @@ export const metadata: Metadata = {
   description: 'Minimalist personal data profile and research portfolio for Ansh Kansara. Turning raw data into decisions and complex interfaces into simple experiences.',
   keywords: ['Ansh Kansara', 'Data Analyst', 'Frontend Developer', 'Data Visualization', 'D3.js', 'React.js', 'Power BI', 'SQL', 'Python', 'Vadodara'],
   authors: [{ name: 'Ansh Kansara' }],
+  icons: {
+    icon: [
+      { url: '/icon.png', type: 'image/png' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    apple: [
+      { url: '/icon.png', sizes: '180x180', type: 'image/png' },
+    ],
+  },
   openGraph: {
     title: 'Ansh Kansara | Data Analyst & Frontend Developer',
     description: 'Minimalist personal data profile and research portfolio for Ansh Kansara.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Ansh Kansara Portfolio',
+    images: [{ url: '/icon.png', width: 512, height: 512, alt: 'Ansh Kansara Monogram' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Ansh Kansara | Data Analyst & Frontend Developer',
     description: 'Turning raw data into decisions and complex interfaces into simple experiences.',
+    images: ['/icon.png'],
   },
 };
 
