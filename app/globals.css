@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #F4F1EA;
+    --text-primary: #20231F;
+    --text-secondary: #6B7168;
+    --card-surface: #FBFAF6;
+    --border-muted: #D9DDD2;
+    --accent-sage: #7C8F73;
+    --accent-apricot: #D98B68;
+    --accent-soft: #E7EDE2;
+    --muted-surface: #E9E7DF;
+  }
+
+  .dark {
+    --bg-primary: #171A17;
+    --text-primary: #F1F0E9;
+    --text-secondary: #A7ADA3;
+    --card-surface: #202520;
+    --border-muted: #343B33;
+    --accent-sage: #A8B99A;
+    --accent-apricot: #E29A76;
+    --accent-soft: #2A332A;
+    --muted-surface: #292E28;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-poppins), system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 250ms ease-in-out, color 250ms ease-in-out, border-color 250ms ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Editorial Utility Classes */
+.bg-theme-main {
+  background-color: var(--bg-primary);
+}
+
+.bg-theme-surface {
+  background-color: var(--card-surface);
+}
+
+.bg-theme-muted {
+  background-color: var(--muted-surface);
+}
+
+.bg-theme-soft {
+  background-color: var(--accent-soft);
+}
+
+.text-theme-main {
+  color: var(--text-primary);
+}
+
+.text-theme-secondary {
+  color: var(--text-secondary);
+}
+
+.text-theme-sage {
+  color: var(--accent-sage);
+}
+
+.text-theme-apricot {
+  color: var(--accent-apricot);
+}
+
+.border-theme-muted {
+  border-color: var(--border-muted);
+}
+
+.border-theme-sage {
+  border-color: var(--accent-sage);
+}
+
+.border-theme-apricot {
+  border-color: var(--accent-apricot);
+}
+
+/* Smooth Focus Rings & Minimal Scrollbar */
+*:focus-visible {
+  outline: 2px solid var(--accent-sage);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
