@@ -33,31 +33,46 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Navigation */}
+          {/* Quick Navigation — Accessible Touch Targets (min 28px height) */}
           <div className="space-y-2">
             <span className="text-xs font-mono tracking-widest text-theme-sage uppercase">
               // NAVIGATION
             </span>
-            <div className="grid grid-cols-2 gap-1 text-xs font-medium">
-              <Link href="/profile" className="text-theme-secondary hover:text-theme-main transition-colors">
+            <div className="grid grid-cols-2 gap-y-1.5 gap-x-3 text-xs font-medium">
+              <Link 
+                href="/profile" 
+                className="min-h-[28px] py-1 inline-flex items-center text-theme-secondary hover:text-theme-main transition-colors"
+              >
                 Profile
               </Link>
-              <Link href="/work" className="text-theme-secondary hover:text-theme-main transition-colors">
+              <Link 
+                href="/work" 
+                className="min-h-[28px] py-1 inline-flex items-center text-theme-secondary hover:text-theme-main transition-colors"
+              >
                 Work
               </Link>
-              <Link href="/projects" className="text-theme-secondary hover:text-theme-main transition-colors">
+              <Link 
+                href="/projects" 
+                className="min-h-[28px] py-1 inline-flex items-center text-theme-secondary hover:text-theme-main transition-colors"
+              >
                 Projects
               </Link>
-              <Link href="/analytics" className="text-theme-secondary hover:text-theme-main transition-colors">
+              <Link 
+                href="/analytics" 
+                className="min-h-[28px] py-1 inline-flex items-center text-theme-secondary hover:text-theme-main transition-colors"
+              >
                 Analytics
               </Link>
-              <Link href="/contact" className="text-theme-secondary hover:text-theme-main transition-colors">
+              <Link 
+                href="/contact" 
+                className="min-h-[28px] py-1 inline-flex items-center text-theme-secondary hover:text-theme-main transition-colors"
+              >
                 Contact
               </Link>
               <a
                 href="/resume/Ansh_Kansara_Resume.pdf"
                 download="Ansh_Kansara_Resume.pdf"
-                className="text-theme-sage hover:underline"
+                className="min-h-[28px] py-1 inline-flex items-center text-theme-sage hover:underline"
               >
                 Resume PDF
               </a>
@@ -69,12 +84,12 @@ export default function Footer() {
             <span className="text-xs font-mono tracking-widest text-theme-sage uppercase">
               // CONNECT & SOCIAL
             </span>
-            <div className="flex flex-col space-y-2 text-xs font-mono">
+            <div className="flex flex-col space-y-1.5 text-xs font-mono">
               <a
                 href={personalDetails.socialLinks.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-theme-secondary hover:text-theme-main transition-colors group"
+                className="min-h-[28px] py-1 inline-flex items-center gap-2 text-theme-secondary hover:text-theme-main transition-colors group"
               >
                 <GithubIcon className="w-3.5 h-3.5 text-theme-sage shrink-0" />
                 <span>GitHub (a833-u)</span>
@@ -84,7 +99,7 @@ export default function Footer() {
                 href={personalDetails.socialLinks.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-theme-secondary hover:text-theme-main transition-colors group"
+                className="min-h-[28px] py-1 inline-flex items-center gap-2 text-theme-secondary hover:text-theme-main transition-colors group"
               >
                 <LinkedinIcon className="w-3.5 h-3.5 text-theme-sage shrink-0" />
                 <span>LinkedIn (ansh-kansara)</span>
@@ -92,7 +107,7 @@ export default function Footer() {
               </a>
               <a
                 href={personalDetails.socialLinks.email}
-                className="inline-flex items-center gap-2 text-theme-secondary hover:text-theme-main transition-colors group"
+                className="min-h-[28px] py-1 inline-flex items-center gap-2 text-theme-secondary hover:text-theme-main transition-colors group"
               >
                 <Mail className="w-3.5 h-3.5 text-theme-sage shrink-0" />
                 <span>akansara833@gmail.com</span>
