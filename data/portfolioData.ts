@@ -108,8 +108,47 @@ export const homeMetrics: Metric[] = [
 
 export const caseStudies: CaseStudy[] = [
   {
-    id: 'customer-shopping-behavior',
+    id: 'business-performance-analytics',
     number: '01',
+    title: 'BUSINESS PERFORMANCE ANALYTICS',
+    date: 'June 2026',
+    type: 'PostgreSQL / SQL / Business Intelligence',
+    tools: ['Python', 'SQL', 'PostgreSQL', 'Power BI', 'TypeScript', 'Next.js', 'Pandas', 'NumPy'],
+    question: 'How can 99,970 transaction records be analyzed to reveal revenue drivers, target risks, and discount margins?',
+    dataSummary: {
+      gathering: 'Loaded 99,970 transaction records into PostgreSQL database business_performance (public.sales_transactions).',
+      cleaning: 'Standardized category capitalization variations and mapped raw "Unkown" payment strings to "Unknown".',
+      preprocessing: 'Engineered time-series aggregations across 30 consecutive months (Jan 2024 to Jun 2026).',
+      validation: 'Validated row counts (99,970 rows, 0 duplicates) and reconciled financial fields across ledger statements.',
+      analysis: 'Executed 11 production SQL queries analyzing revenue, profit, margins, target hit rates (6.28%), and 80 sales reps.'
+    },
+    cleaningSteps: {
+      missingValues: 'Validated 0 missing order IDs across 99,970 records',
+      duplicates: 'Confirmed 0 duplicate order keys',
+      inconsistencies: 'Standardized category naming (accessories -> Accessories) and payment strings',
+      dataTypes: 'Cast monetary fields to Numeric(12,2) and dates to ISO 8601'
+    },
+    sqlQuery: `SELECT
+    category,
+    COUNT(*) AS total_orders,
+    SUM(revenue) AS total_revenue,
+    SUM(profit) AS total_profit,
+    ROUND(SUM(profit) / NULLIF(SUM(revenue), 0) * 100, 2) AS profit_margin_pct
+FROM sales_transactions
+GROUP BY category
+ORDER BY total_revenue DESC;`,
+    results: [
+      { label: 'Total Revenue & Profit', value: '₹3.37B Revenue | ₹1.06B Net Profit (31.41% Profit Margin)' },
+      { label: 'Category Insights', value: 'Electronics leads revenue (₹1.35B), Office Supplies leads margin (35.24%)' },
+      { label: 'Target Hit Rate Finding', value: '6.28% transaction-level target hit rate overall across 99,970 transactions' }
+    ],
+    storyPipeline: ['Raw Data', 'Cleaning', 'Validation', 'PostgreSQL', 'SQL Analysis', 'KPIs', 'BI Dashboard', 'Insights', 'Strategy'],
+    description: 'An end-to-end sales analytics project using Python, PostgreSQL and SQL to analyze revenue, profitability, sales targets, customer segments, products and regional performance.',
+    resultSummary: 'Transformed 99,970 raw sales records into an interactive BI product and executive strategy notebook.'
+  },
+  {
+    id: 'customer-shopping-behavior',
+    number: '02',
     title: 'CUSTOMER SHOPPING BEHAVIOR ANALYSIS',
     date: 'April 2026',
     type: 'Data Analytics / Business Intelligence',
