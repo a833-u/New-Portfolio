@@ -41,7 +41,7 @@ export default function ProjectsPage() {
         </div>
         <Link
           href="/analytics"
-          className="px-4 py-2 rounded-sm bg-theme-sage text-[#F4F1EA] dark:text-[#171A17] font-mono text-xs font-bold hover:opacity-90 transition-all flex items-center gap-1.5 shrink-0 self-start sm:self-auto"
+          className="px-4 py-2.5 rounded-lg bg-[#20231F] text-[#F4F1EA] dark:bg-[#A8B99A] dark:text-[#171A17] font-mono text-xs font-bold hover:opacity-90 transition-all flex items-center gap-1.5 shrink-0 self-start sm:self-auto shadow-sm cursor-pointer"
         >
           <span>Open Analytics Hub</span>
           <ArrowRight className="w-3.5 h-3.5" />

@@ -52,6 +52,14 @@
   background-color: var(--accent-soft);
 }
 
+.bg-theme-sage {
+  background-color: var(--accent-sage);
+}
+
+.bg-theme-apricot {
+  background-color: var(--accent-apricot);
+}
+
 .text-theme-main {
   color: var(--text-primary);
 }

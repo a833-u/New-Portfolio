@@ -243,7 +243,7 @@ export default function Header() {
                 href="/resume/Ansh_Kansara_Resume.pdf"
                 download="Ansh_Kansara_Resume.pdf"
                 onClick={handleCloseMenu}
-                className="flex items-center justify-center gap-2.5 w-full text-xs font-semibold text-[#F4F1EA] dark:text-[#171A17] bg-theme-sage hover:opacity-95 py-3 rounded-sm transition-all duration-200 active:scale-[0.98] shadow-sm"
+                className="flex items-center justify-center gap-2.5 w-full text-xs font-bold text-[#F4F1EA] dark:text-[#171A17] bg-[#20231F] dark:bg-[#A8B99A] hover:opacity-95 py-3 rounded-md transition-all duration-200 active:scale-[0.98] shadow-sm cursor-pointer"
               >
                 <span>DOWNLOAD CURRICULUM VITAE</span>
                 <Download className="w-3.5 h-3.5" />
