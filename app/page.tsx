@@ -77,12 +77,12 @@ export default function HomePage() {
               Specializing in <strong className="text-theme-main font-semibold">SQL, PostgreSQL, Python, data cleaning, exploratory analysis, and Power BI dashboards</strong>. Powered by 1.5 years of professional software development experience at Nilesh IT Solution creating data-driven tools and interactive reporting interfaces.
             </motion.p>
 
-            {/* Three-Tier CTA Strategy (Original Theme Colors) */}
+            {/* Three-Tier CTA Strategy */}
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 pt-2">
               {/* PRIMARY CTA: Explore Analytics Work */}
               <Link
                 href="/analytics"
-                className="px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-theme-sage text-[#F4F1EA] dark:text-[#171A17] hover:opacity-95 transition-all flex items-center gap-2 shadow-xs cursor-pointer"
+                className="px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-[#FF7A18] text-[#071A2B] hover:bg-[#FF7A18]/90 transition-all flex items-center gap-2 shadow-lg cursor-pointer"
               >
                 <BarChart3 className="w-4 h-4 shrink-0" />
                 <span>Explore Analytics Work</span>
@@ -165,7 +165,7 @@ export default function HomePage() {
       <ScrollReveal className="space-y-6 border-t border-theme-muted pt-10">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
           <div>
-            <div className="text-xs font-mono font-bold text-theme-sage uppercase">
+            <div className="text-xs font-mono font-bold text-[#FF7A18] uppercase">
               // FLAGSHIP ANALYTICS PRODUCT
             </div>
             <h2 className="text-xl sm:text-2xl font-bold tracking-tight text-theme-main font-sans">
@@ -174,48 +174,48 @@ export default function HomePage() {
           </div>
           <Link
             href="/analytics"
-            className="text-xs font-mono font-bold text-theme-sage hover:underline flex items-center gap-1 shrink-0"
+            className="text-xs font-mono font-bold text-[#FF7A18] hover:underline flex items-center gap-1 shrink-0"
           >
             Open Interactive BI Hub →
           </Link>
         </div>
 
-        {/* Flagship Product Showcase Card (Original Theme Colors) */}
-        <div className="p-6 bg-theme-surface border border-theme-muted rounded-xl text-theme-main space-y-4">
-          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-theme-muted pb-3 text-xs font-mono">
-            <span className="px-2.5 py-1 rounded bg-theme-sage text-[#F4F1EA] dark:text-[#171A17] font-bold">
+        {/* Flagship Product Showcase Card */}
+        <div className="p-6 bg-[#071A2B] border border-[#102F45] rounded-xl text-[#F5F7FA] space-y-4 shadow-xl">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#102F45] pb-3 text-xs font-mono">
+            <span className="px-2.5 py-1 rounded bg-[#FF7A18] text-[#071A2B] font-bold">
               POSTGRESQL CASE STUDY
             </span>
-            <span className="text-theme-secondary">
+            <span className="text-[#9FB0BF]">
               99,970 Transactions · Jan 2024 – Jun 2026
             </span>
           </div>
 
           <div className="space-y-2">
-            <p className="text-sm text-theme-secondary leading-relaxed">
+            <p className="text-sm text-[#9FB0BF] leading-relaxed">
               Analyzed 99,970 transaction records across 30 consecutive months. Formulated 11 production SQL queries evaluating revenue drivers (₹3.37B), net profitability (31.41% margin), target hit rates (6.28%), discount margins, and an 80-salesperson performance matrix.
             </p>
           </div>
 
           {/* Workflow Stepper Line */}
           <div className="flex flex-wrap items-center gap-1.5 pt-2 text-[10px] font-mono">
-            <span className="px-2 py-0.5 rounded bg-theme-soft text-theme-sage font-bold">Raw Data</span>
-            <span className="text-theme-secondary">→</span>
-            <span className="px-2 py-0.5 rounded bg-theme-soft text-theme-main">Cleaning</span>
-            <span className="text-theme-secondary">→</span>
-            <span className="px-2 py-0.5 rounded bg-theme-soft text-theme-main">PostgreSQL</span>
-            <span className="text-theme-secondary">→</span>
-            <span className="px-2 py-0.5 rounded bg-theme-soft text-theme-sage font-bold">SQL Analysis</span>
-            <span className="text-theme-secondary">→</span>
-            <span className="px-2 py-0.5 rounded bg-theme-soft text-theme-sage font-bold">BI Dashboard</span>
-            <span className="text-theme-secondary">→</span>
-            <span className="px-2 py-0.5 rounded bg-theme-soft text-theme-sage">Insights</span>
+            <span className="px-2 py-0.5 rounded bg-[#102F45] text-[#FF7A18] font-bold">Raw Data</span>
+            <span className="text-[#9FB0BF]">→</span>
+            <span className="px-2 py-0.5 rounded bg-[#102F45] text-[#F5F7FA]">Cleaning</span>
+            <span className="text-[#9FB0BF]">→</span>
+            <span className="px-2 py-0.5 rounded bg-[#102F45] text-[#F5F7FA]">PostgreSQL</span>
+            <span className="text-[#9FB0BF]">→</span>
+            <span className="px-2 py-0.5 rounded bg-[#102F45] text-[#35D07F] font-bold">SQL Analysis</span>
+            <span className="text-[#9FB0BF]">→</span>
+            <span className="px-2 py-0.5 rounded bg-[#102F45] text-[#FF7A18] font-bold">BI Dashboard</span>
+            <span className="text-[#9FB0BF]">→</span>
+            <span className="px-2 py-0.5 rounded bg-[#102F45] text-[#35D07F]">Insights</span>
           </div>
 
           <div className="pt-2">
             <Link
               href="/analytics"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-theme-sage text-[#F4F1EA] dark:text-[#171A17] font-mono text-xs font-bold hover:opacity-95 transition-colors shadow-xs"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-[#FF7A18] text-[#071A2B] font-mono text-xs font-bold hover:bg-[#FF7A18]/90 transition-colors"
             >
               <span>Launch BI Dashboard & SQL Explorer</span>
               <ArrowRight className="w-4 h-4" />
@@ -289,12 +289,12 @@ export default function HomePage() {
 
         <div className="p-6 bg-theme-surface/80 border border-theme-muted rounded-sm space-y-4 text-xs font-mono">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-theme-muted pb-3 gap-1">
-            <span className="text-theme-sage font-bold">Data Analytics & BI (Primary)</span>
+            <span className="text-[#FF7A18] font-bold">Data Analytics & BI (Primary)</span>
             <span className="text-theme-main font-semibold">SQL · PostgreSQL · Python · Pandas · NumPy · Power BI · Excel</span>
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center justify-between border-b border-theme-muted pb-3 gap-1">
-            <span className="text-theme-apricot font-bold">Data Visualization</span>
+            <span className="text-[#35D07F] font-bold">Data Visualization</span>
             <span className="text-theme-main">Power BI · D3.js · Matplotlib · Seaborn · Custom Charts</span>
           </div>
 
