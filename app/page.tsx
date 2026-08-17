@@ -8,6 +8,7 @@ import MetricCounter from '@/components/ui/MetricCounter';
 import StatusIndicator from '@/components/ui/StatusIndicator';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import HeroAnalyticsVisual from '@/components/hero/HeroAnalyticsVisual';
+import HeroCTAButtons from '@/components/hero/HeroCTAButtons';
 import { ArrowRight, BarChart3, Database, FileCode, CheckCircle2 } from 'lucide-react';
 
 export default function HomePage() {
@@ -77,34 +78,9 @@ export default function HomePage() {
               Specializing in <strong className="text-theme-main font-semibold">SQL, PostgreSQL, Python, data cleaning, exploratory analysis, and Power BI dashboards</strong>. Powered by 1.5 years of professional software development experience at Nilesh IT Solution creating data-driven tools and interactive reporting interfaces.
             </motion.p>
 
-            {/* Three-Tier CTA Strategy */}
-            <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 pt-2">
-              {/* PRIMARY CTA: Explore Analytics Work */}
-              <Link
-                href="/analytics"
-                className="px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-[#FF7A18] text-[#071A2B] hover:bg-[#FF7A18]/90 transition-all flex items-center gap-2 shadow-lg cursor-pointer"
-              >
-                <BarChart3 className="w-4 h-4 shrink-0" />
-                <span>Explore Analytics Work</span>
-                <ArrowRight className="w-4 h-4 shrink-0" />
-              </Link>
-
-              {/* SECONDARY CTA: View All Projects */}
-              <Link
-                href="/projects"
-                className="px-4 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-theme-surface border border-theme-muted text-theme-main hover:border-theme-sage transition-all flex items-center gap-2 cursor-pointer"
-              >
-                <FileCode className="w-4 h-4 shrink-0 text-theme-sage" />
-                <span>View All Projects</span>
-              </Link>
-
-              {/* TERTIARY CTA: Contact Me */}
-              <Link
-                href="/contact"
-                className="px-4 py-3 rounded-lg text-xs font-mono font-medium text-theme-secondary hover:text-theme-main transition-colors cursor-pointer"
-              >
-                Contact Me →
-              </Link>
+            {/* Three-Tier Analytical CTA Strategy */}
+            <motion.div variants={itemVariants}>
+              <HeroCTAButtons />
             </motion.div>
 
             {/* Verified Capabilities Badges */}
