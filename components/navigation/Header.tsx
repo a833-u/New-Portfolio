@@ -107,7 +107,7 @@ export default function Header() {
                 href={item.href}
                 className={`group relative px-3.5 py-1.5 rounded-sm transition-all duration-200 ease-out active:scale-[0.96] flex items-center gap-1.5 ${
                   isActive
-                    ? 'text-theme-sage font-bold bg-theme-sage/15 border-b-2 border-theme-sage shadow-xs'
+                    ? 'text-theme-sage font-bold bg-theme-sage/15 shadow-xs'
                     : 'text-theme-secondary hover:text-theme-sage hover:bg-theme-sage/10 hover:-translate-y-0.5'
                 }`}
               >
