@@ -5,8 +5,14 @@ import { monthlyTrendData } from '@/data/analyticsData';
 import { MonthlyTrendPoint } from '@/types/analytics';
 import { formatCurrency } from '@/services/analyticsService';
 
+interface TrendChartPoint extends MonthlyTrendPoint {
+  x: number;
+  revY: number;
+  profY: number;
+}
+
 export default function MonthlyTrendChart() {
-  const [hoveredPoint, setHoveredPoint] = useState<MonthlyTrendPoint | null>(null);
+  const [hoveredPoint, setHoveredPoint] = useState<TrendChartPoint | null>(null);
 
   // SVG Chart bounds
   const width = 800;
@@ -23,7 +29,7 @@ export default function MonthlyTrendChart() {
   const minVal = 0;
 
   // Compute X and Y positions for 30 points
-  const points = monthlyTrendData.map((d, i) => {
+  const points: TrendChartPoint[] = monthlyTrendData.map((d, i) => {
     const x = paddingLeft + (i / (monthlyTrendData.length - 1)) * chartWidth;
     const revY = paddingTop + chartHeight - ((d.revenue - minVal) / (maxVal - minVal)) * chartHeight;
     const profY = paddingTop + chartHeight - ((d.profit - minVal) / (maxVal - minVal)) * chartHeight;
@@ -94,7 +100,7 @@ export default function MonthlyTrendChart() {
           {/* Profit Line Path */}
           <path d={profPath} fill="none" stroke="#35D07F" strokeWidth="2" strokeDasharray="4 2" strokeLinecap="round" strokeLinejoin="round" />
 
-          {/* Interactive Interactive Data Points & Vertical Guide */}
+          {/* Interactive Data Points & Vertical Guide */}
           {points.map((p, i) => (
             <g key={i}>
               {/* Invisible Hover Receiver Target */}
