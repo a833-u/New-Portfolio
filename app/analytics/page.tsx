@@ -91,46 +91,51 @@ export default function AnalyticsPage() {
           <div className="text-xs font-mono font-bold tracking-widest text-theme-sage uppercase">
             // ENTERPRISE DATA ANALYTICS & BI PRODUCTS
           </div>
-          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-theme-main font-sans">
+          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-theme-main font-sans leading-tight">
             Business Intelligence & Analytics Hub
           </h1>
-          <p className="text-xs sm:text-sm text-theme-secondary max-w-3xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-theme-secondary max-w-3xl leading-relaxed font-sans">
             Select an analytics project below to inspect interactive PostgreSQL dashboards, SQL explorers, data quality audits, and strategic executive recommendations.
           </p>
         </div>
 
-        {/* Side-by-Side Interactive Project Selector Cards Grid / Mobile Carousel */}
+        {/* Side-by-Side Interactive Project Selector Cards Grid (Mobile Managed Layout) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
           {/* PROJECT CARD 1: Business Performance Analytics */}
           <button
             onClick={() => setSelectedProject('business-sales')}
-            className={`p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between space-y-4 shadow-lg ${
+            className={`p-4 sm:p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between space-y-4 shadow-lg ${
               selectedProject === 'business-sales'
-                ? 'bg-[#071A2B] border-[#FF7A18] text-[#F5F7FA] ring-2 ring-[#FF7A18]/40 scale-[1.005]'
+                ? 'bg-[#071A2B] border-[#FF7A18] text-[#F5F7FA] ring-2 ring-[#FF7A18]/40'
                 : 'bg-theme-surface border-theme-muted text-theme-main hover:border-theme-sage'
             }`}
           >
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded ${
+            <div className="space-y-2.5">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded shrink-0 ${
                   selectedProject === 'business-sales'
                     ? 'bg-[#FF7A18] text-[#071A2B]'
                     : 'bg-theme-muted text-theme-sage'
                 }`}>
                   PROJECT 01 · ENTERPRISE SALES
                 </span>
-                {selectedProject === 'business-sales' && (
-                  <span className="text-xs font-mono text-[#FF7A18] font-bold flex items-center gap-1">
-                    <CheckCircle2 className="w-4 h-4" /> ACTIVE VIEW
+
+                {selectedProject === 'business-sales' ? (
+                  <span className="px-2 py-0.5 rounded bg-[#FF7A18]/20 border border-[#FF7A18]/40 text-[10px] font-mono text-[#FF7A18] font-bold flex items-center gap-1 shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5" /> ACTIVE VIEW
+                  </span>
+                ) : (
+                  <span className="text-[10px] font-mono text-theme-secondary group-hover:text-theme-main transition-colors shrink-0">
+                    Tap to view →
                   </span>
                 )}
               </div>
 
-              <h2 className="text-lg sm:text-xl font-extrabold tracking-tight leading-snug">
+              <h2 className="text-base sm:text-xl font-extrabold tracking-tight leading-snug">
                 Business Performance Analytics
               </h2>
 
-              <p className={`text-xs leading-relaxed ${selectedProject === 'business-sales' ? 'text-[#9FB0BF]' : 'text-theme-secondary'}`}>
+              <p className={`text-xs leading-relaxed font-sans ${selectedProject === 'business-sales' ? 'text-[#9FB0BF]' : 'text-theme-secondary'}`}>
                 99,970 transaction-level sales analysis (Jan 2024 – Jun 2026), profitability trends, target hit rates, and 80-salesperson performance matrix.
               </p>
             </div>
@@ -148,33 +153,38 @@ export default function AnalyticsPage() {
           {/* PROJECT CARD 2: Customer Shopping Behavior Analysis */}
           <button
             onClick={() => setSelectedProject('customer-rfm')}
-            className={`p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between space-y-4 shadow-lg ${
+            className={`p-4 sm:p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between space-y-4 shadow-lg ${
               selectedProject === 'customer-rfm'
-                ? 'bg-[#041C1E] border-[#00E5A3] text-[#F0FDFA] ring-2 ring-[#00E5A3]/40 scale-[1.005]'
+                ? 'bg-[#041C1E] border-[#00E5A3] text-[#F0FDFA] ring-2 ring-[#00E5A3]/40'
                 : 'bg-theme-surface border-theme-muted text-theme-main hover:border-theme-sage'
             }`}
           >
-            <div className="space-y-2">
-              <div className="flex items-center justify-between">
-                <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded ${
+            <div className="space-y-2.5">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-1 rounded shrink-0 ${
                   selectedProject === 'customer-rfm'
                     ? 'bg-[#00E5A3] text-[#041C1E]'
                     : 'bg-theme-muted text-theme-sage'
                 }`}>
                   PROJECT 02 · CUSTOMER RFM
                 </span>
-                {selectedProject === 'customer-rfm' && (
-                  <span className="text-xs font-mono text-[#00E5A3] font-bold flex items-center gap-1">
-                    <CheckCircle2 className="w-4 h-4" /> ACTIVE VIEW
+
+                {selectedProject === 'customer-rfm' ? (
+                  <span className="px-2 py-0.5 rounded bg-[#00E5A3]/20 border border-[#00E5A3]/40 text-[10px] font-mono text-[#00E5A3] font-bold flex items-center gap-1 shrink-0">
+                    <CheckCircle2 className="w-3.5 h-3.5" /> ACTIVE VIEW
+                  </span>
+                ) : (
+                  <span className="text-[10px] font-mono text-theme-secondary group-hover:text-theme-main transition-colors shrink-0">
+                    Tap to view →
                   </span>
                 )}
               </div>
 
-              <h2 className="text-lg sm:text-xl font-extrabold tracking-tight leading-snug">
+              <h2 className="text-base sm:text-xl font-extrabold tracking-tight leading-snug">
                 Customer Shopping Behavior Analysis
               </h2>
 
-              <p className={`text-xs leading-relaxed ${selectedProject === 'customer-rfm' ? 'text-[#8EAAB0]' : 'text-theme-secondary'}`}>
+              <p className={`text-xs leading-relaxed font-sans ${selectedProject === 'customer-rfm' ? 'text-[#8EAAB0]' : 'text-theme-secondary'}`}>
                 3,900 customer purchasing profiles, PostgreSQL NTILE RFM quartiles, VIP Pareto contribution (54% spend), and subscription LTV multipliers.
               </p>
             </div>
@@ -193,8 +203,8 @@ export default function AnalyticsPage() {
         {/* View Mode Tabs Header (Same width, 3 tabs for BOTH projects, mobile horizontal slider) */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pt-2">
           <div className="text-xs font-mono font-bold text-theme-main uppercase flex flex-wrap items-center gap-2">
-            <span className="text-theme-secondary">// SELECTED PROJECT VIEW:</span>
-            <span className={`px-2.5 py-1 rounded font-bold transition-colors ${
+            <span className="text-theme-secondary">// SELECTED PROJECT:</span>
+            <span className={`px-2.5 py-1 rounded font-bold transition-colors text-xs ${
               selectedProject === 'business-sales'
                 ? 'bg-[#FF7A18]/15 text-[#FF7A18] border border-[#FF7A18]/30'
                 : 'bg-[#00E5A3]/15 text-[#00E5A3] border border-[#00E5A3]/30'

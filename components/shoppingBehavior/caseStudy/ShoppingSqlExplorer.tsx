@@ -66,7 +66,7 @@ export default function ShoppingSqlExplorer() {
         <div className="lg:col-span-8 space-y-4">
           {/* Query Header */}
           <div className="p-4 bg-[#0B282C] border border-[#10353B] rounded-lg space-y-2">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <span className="text-xs font-mono text-[#00E5A3] font-bold">
                 QUERY {activeQuery.queryNumber} — {activeQuery.title.toUpperCase()}
               </span>
