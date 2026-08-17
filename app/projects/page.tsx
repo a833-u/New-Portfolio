@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import { caseStudies } from '@/data/portfolioData';
 import CaseStudyDetail from '@/components/case-studies/CaseStudyDetail';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import StarBorder from '@/components/ui/StarBorder';
 import { Check, ArrowRight, BarChart3, Database } from 'lucide-react';
 import Link from 'next/link';
 
@@ -39,13 +40,10 @@ export default function ProjectsPage() {
             Interactive Business Performance Analytics & Customer RFM dashboards with 100% validated SQL results.
           </p>
         </div>
-        <Link
-          href="/analytics"
-          className="px-4 py-2.5 rounded-lg bg-[#20231F] text-[#F4F1EA] dark:bg-[#A8B99A] dark:text-[#171A17] font-mono text-xs font-bold hover:opacity-90 transition-all flex items-center gap-1.5 shrink-0 self-start sm:self-auto shadow-sm cursor-pointer"
-        >
+        <StarBorder href="/analytics" speed="5s" thickness={1}>
           <span>Open Analytics Hub</span>
-          <ArrowRight className="w-3.5 h-3.5" />
-        </Link>
+          <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+        </StarBorder>
       </div>
 
       {/* Case Study Switcher / Navigation */}

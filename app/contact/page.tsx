@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import ScrollReveal from '@/components/ui/ScrollReveal';
+import StarBorder from '@/components/ui/StarBorder';
 import { personalDetails } from '@/data/portfolioData';
 import { Mail, Phone, MapPin, Download, ArrowUpRight, Send, CheckCircle2, AlertCircle } from 'lucide-react';
 import { ContactFormData } from '@/types/portfolio';
@@ -326,20 +327,23 @@ export default function ContactPage() {
                 />
               </div>
 
-              <button
+              <StarBorder
+                as="button"
                 type="submit"
                 disabled={status === 'submitting'}
-                className="w-full py-3.5 px-6 bg-[#20231F] dark:bg-[#A8B99A] text-[#F4F1EA] dark:text-[#171A17] font-mono font-bold text-xs uppercase tracking-wider rounded-sm border border-transparent hover:opacity-90 active:scale-[0.99] transition-all flex items-center justify-center gap-2 shadow-md disabled:opacity-50 cursor-pointer"
+                speed="5s"
+                thickness={1}
+                className="w-full"
               >
                 {status === 'submitting' ? (
                   <span>Sending Message...</span>
                 ) : (
                   <>
                     <span>Submit Inquiry</span>
-                    <Send className="w-3.5 h-3.5" />
+                    <Send className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
                   </>
                 )}
-              </button>
+              </StarBorder>
             </form>
           </div>
         </ScrollReveal>
