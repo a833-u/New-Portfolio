@@ -8,10 +8,10 @@ import { Download, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
-  { number: '01', name: 'Profile', href: '/profile' },
-  { number: '02', name: 'Work', href: '/work' },
-  { number: '03', name: 'Projects', href: '/projects' },
-  { number: '04', name: 'Analytics', href: '/analytics' },
+  { number: '01', name: 'Analytics Hub', href: '/analytics' },
+  { number: '02', name: 'Projects', href: '/projects' },
+  { number: '03', name: 'Experience', href: '/work' },
+  { number: '04', name: 'About & Skills', href: '/profile' },
   { number: '05', name: 'Contact', href: '/contact' },
 ];
 
@@ -93,7 +93,7 @@ export default function Header() {
             <span className="w-1.5 h-1.5 rounded-full bg-theme-sage opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
           </span>
           <span className="text-[10px] font-mono tracking-widest text-theme-secondary uppercase mt-0.5">
-            Data Analyst · Developer
+            Data Analyst · Business Intelligence
           </span>
         </Link>
 

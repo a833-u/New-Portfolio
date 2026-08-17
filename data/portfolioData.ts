@@ -8,15 +8,15 @@ import {
 
 export const personalDetails: PersonalDetails = {
   name: 'Ansh Kansara',
-  title: 'Data Analyst · Frontend Developer',
-  secondaryPositioning: 'Data Analytics · Data Visualization · Frontend Engineering',
+  title: 'Data Analyst · Business Intelligence',
+  secondaryPositioning: 'SQL · PostgreSQL · Python · Power BI · Business Analytics',
   location: 'Vadodara, Gujarat, India',
   email: 'akansara833@gmail.com',
   phone: '+91 63568 74321',
-  bio: `I am an Information Technology graduate from Parul University with a B.Tech in Information Technology, graduating in 2025 with a CGPA of 7.34. I have nearly 1.5 years of professional experience at Nilesh IT Solution, where I progressed from Frontend Developer Intern to Full-Time Developer. My work has involved React.js, backend API integration, SQL-driven data, D3.js visualizations, dashboards, reports, charts, and data tables. Alongside frontend development, I have developed practical skills in Python, Pandas, NumPy, SQL, PostgreSQL, Power BI, Excel, Tableau, and data analysis. I enjoy working at the intersection of technology, visualization, and data, turning complex information into clear and useful experiences.`,
-  mission: 'Build reliable, intuitive, and data-driven digital experiences that transform complex information into clear and actionable insights.',
-  vision: 'Grow into a strong data-focused technology professional who combines software development, analytics, and visualization to solve meaningful real-world problems.',
-  whatMakesMeDifferent: "I don't just analyze data. I know how to turn it into an interface people can actually use.",
+  bio: `I am an Information Technology graduate (B.Tech, Parul University 2025) specializing in Data Analytics, SQL, Python, and Business Intelligence. I have nearly 1.5 years of professional experience at Nilesh IT Solution, where I worked with SQL-driven databases, backend API data, reports, charts, and interactive dashboards. My analytical toolbox includes Python, SQL, PostgreSQL, Pandas, NumPy, Power BI, Excel, and data visualization. My software development background gives me a unique advantage: I don't just analyze data and write SQL queries—I build the interactive tools and analytical products needed to present insights effectively to business stakeholders.`,
+  mission: 'Transform complex transactional and enterprise data into actionable business intelligence through rigorous data cleaning, PostgreSQL modeling, SQL analysis, and interactive executive dashboards.',
+  vision: 'Grow into an enterprise Business Intelligence & Data Analytics professional who bridges complex database systems with clear business decision-making.',
+  whatMakesMeDifferent: "I don't just write SQL and analyze data. I build the interactive analytical products that business leaders use to make decisions.",
   education: [
     {
       year: '2025',
@@ -35,19 +35,19 @@ export const personalDetails: PersonalDetails = {
     {
       period: 'DEC 2024 — JUN 2026',
       company: 'Nilesh IT Solution',
-      role: 'Frontend Developer',
+      role: 'Frontend Developer & Data Reporting',
       progression: 'Intern → Full-Time',
       location: 'Vadodara, Gujarat',
-      summary: 'Developed responsive and interactive frontend interfaces for client applications, integrating data from backend APIs and presenting it through structured dashboards, reports, charts, and data tables.',
+      summary: 'Developed responsive, data-driven client applications, integrating backend API data, managing SQL data flows, and building structured reporting dashboards, charts, and data tables.',
       responsibilities: [
-        'Built reusable React.js components for data-driven interfaces.',
-        'Integrated API responses and SQL-driven data.',
-        'Validated data consistency.',
-        'Handled loading, error, and empty states.',
-        'Developed D3.js and React.js data visualizations.',
-        'Created client-facing dashboards.',
-        'Used Microsoft Excel for tracking, validation, and reporting.',
-        'Collaborated with designers, backend developers, QA teams, and clients.'
+        'Built reusable components for data-driven analytical interfaces.',
+        'Integrated API responses and SQL-driven database flows.',
+        'Validated data consistency across backend records and reporting tables.',
+        'Handled data loading, error handling, and empty dataset states.',
+        'Developed custom D3.js and React data visualizations.',
+        'Created client-facing analytical dashboards for business reporting.',
+        'Used Microsoft Excel for tracking, data verification, and reporting.',
+        'Collaborated with designers, backend engineers, QA, and business clients.'
       ]
     }
   ],
@@ -69,22 +69,31 @@ export const personalDetails: PersonalDetails = {
 
 export const homeMetrics: Metric[] = [
   {
+    id: 'txns',
+    number: '99,970',
+    value: 99970,
+    suffix: '',
+    decimals: 0,
+    label: 'TRANSACTIONS ANALYZED',
+    description: '30-month PostgreSQL dataset analyzed for profitability, target hit-rates, and rep performance.'
+  },
+  {
     id: 'exp',
     number: '01.5+',
     value: 1.5,
     suffix: '+',
     decimals: 1,
     label: 'YEARS EXPERIENCE',
-    description: 'Professional experience at Nilesh IT Solution blending frontend engineering with SQL & API data integration.'
+    description: 'Professional experience blending data reporting and SQL integration with software engineering.'
   },
   {
-    id: 'users',
-    number: '10K+',
-    value: 10000,
-    suffix: '+',
-    decimals: 0,
-    label: 'USERS REACHED',
-    description: 'User base served across platforms featuring custom reporting components and engagement charts.'
+    id: 'margin',
+    number: '31.41%',
+    value: 31.41,
+    suffix: '%',
+    decimals: 2,
+    label: 'PROFIT MARGIN ANALYZED',
+    description: 'Verified SQL aggregation output across ₹3.37B sales revenue dataset.'
   },
   {
     id: 'accuracy',
@@ -92,17 +101,8 @@ export const homeMetrics: Metric[] = [
     value: 35,
     suffix: '%',
     decimals: 0,
-    label: 'SEARCH ACCURACY IMPROVEMENT',
-    description: 'Optimization achieved through SQL-driven filtering and property listing data reconciliation.'
-  },
-  {
-    id: 'cgpa',
-    number: '7.34',
-    value: 7.34,
-    suffix: '',
-    decimals: 2,
-    label: 'B.TECH CGPA',
-    description: 'Graduated in Information Technology from Parul University (May 2025).'
+    label: 'DATA FILTER ACCURACY',
+    description: 'Optimization achieved through SQL-driven database indexing and data reconciliation.'
   }
 ];
 
@@ -151,9 +151,9 @@ ORDER BY total_revenue DESC;`,
     number: '02',
     title: 'CUSTOMER SHOPPING BEHAVIOR ANALYSIS',
     date: 'April 2026',
-    type: 'Data Analytics / Business Intelligence',
+    type: 'Data Analytics / RFM Segmentation',
     tools: ['Python', 'SQL', 'PostgreSQL', 'Power BI', 'Pandas', 'NumPy', 'Excel', 'Matplotlib', 'Seaborn'],
-    question: 'How can transactional customer data be transformed into useful business insights?',
+    question: 'How can transactional customer data be transformed into useful RFM business insights?',
     dataSummary: {
       gathering: 'Extracted transactional history across multi-channel retail touchpoints.',
       cleaning: 'Isolated anomalies, imputed null records, and sanitized customer demographics.',
@@ -205,10 +205,10 @@ ORDER BY spend_quartile ASC;`,
   },
   {
     id: 'propvista',
-    number: '02',
+    number: '03',
     title: 'PROPVISTA — REAL ESTATE DATA PLATFORM',
     date: 'February 2025 – April 2025',
-    type: 'Full-Stack / Data-Driven Web Application',
+    type: 'Data Preprocessing / Search Indexing',
     tools: ['React.js', 'Node.js', 'MongoDB', 'SQL', 'PostgreSQL', 'Python', 'Excel', 'Git'],
     question: 'How to clean, index, and query property listing records to maximize user search precision?',
     dataSummary: {
@@ -239,99 +239,99 @@ export const workflowSteps: WorkflowStep[] = [
   {
     number: '01',
     name: 'GATHER',
-    description: 'Collect information from multiple sources and understand its structure before beginning analysis.',
+    description: 'Collect information from multiple sources and understand its schema and distribution before beginning analysis.',
     tools: ['Python', 'SQL', 'Excel', 'APIs']
   },
   {
     number: '02',
     name: 'CLEAN',
-    description: 'Handle missing values, duplicates, inconsistencies, and formatting problems to create analysis-ready data.',
+    description: 'Handle missing values, duplicate keys, formatting inconsistencies, and anomalies to create analysis-ready datasets.',
     tools: ['Pandas', 'NumPy', 'Excel', 'SQL']
   },
   {
     number: '03',
     name: 'VALIDATE',
-    description: 'Cross-check records, relationships, aggregations, and outputs to ensure consistency and accuracy.',
-    tools: ['SQL', 'Excel', 'PostgreSQL']
+    description: 'Cross-check database row counts, relationships, financial aggregations, and query outputs for 100% accuracy.',
+    tools: ['PostgreSQL', 'SQL', 'Excel']
   },
   {
     number: '04',
     name: 'ANALYZE',
-    description: 'Use queries, aggregations, comparisons, segmentation, and exploratory analysis to identify patterns and relationships.',
-    tools: ['SQL', 'Python', 'Pandas', 'NumPy']
+    description: 'Execute SQL window functions, CTEs, GROUP BY aggregations, and exploratory data analysis to discover business drivers.',
+    tools: ['PostgreSQL', 'SQL', 'Python', 'Pandas']
   },
   {
     number: '05',
     name: 'VISUALIZE',
-    description: 'Turn analytical findings into visual formats that technical and non-technical stakeholders can understand.',
+    description: 'Build interactive dashboards and clear data visualizations that communicate complex metrics to stakeholders.',
     tools: ['Power BI', 'D3.js', 'Matplotlib', 'Seaborn', 'Excel']
   },
   {
     number: '06',
     name: 'EXPLAIN',
-    description: 'Translate technical findings into clear observations, reports, and business-oriented insights.',
+    description: 'Translate technical SQL findings into clear executive summaries, reporting tables, and actionable observations.',
     tools: ['Executive Summaries', 'Data Stories', 'Documentation']
   },
   {
     number: '07',
     name: 'DECIDE',
-    description: 'The final goal is not the chart. It is helping someone understand what the data means and what should happen next.',
-    tools: ['Strategic Recommendations', 'Product Decisions', 'Action Items']
+    description: 'Deliver strategic recommendations, risk warnings, and ROI opportunities to guide business decision-makers.',
+    tools: ['Strategic Recommendations', 'Business Decisions', 'Action Plans']
   }
 ];
 
 export const toolboxCategories: ToolboxCategory[] = [
   {
-    category: 'ANALYZE',
-    skills: ['Python', 'Pandas', 'NumPy', 'SQL']
+    category: 'DATA ANALYTICS & BI (PRIMARY)',
+    skills: ['SQL', 'PostgreSQL', 'Python', 'Pandas', 'NumPy', 'Data Cleaning', 'Exploratory Data Analysis', 'Statistical Analysis', 'Power BI', 'Excel']
   },
   {
-    category: 'VISUALIZE',
-    skills: ['Power BI', 'D3.js', 'Matplotlib', 'Seaborn', 'Excel', 'Tableau']
+    category: 'DATA VISUALIZATION',
+    skills: ['Power BI', 'D3.js', 'Matplotlib', 'Seaborn', 'Excel', 'Chart.js']
   },
   {
-    category: 'BUILD',
-    skills: ['React.js', 'JavaScript', 'HTML5', 'CSS3', 'Node.js']
+    category: 'SOFTWARE ENGINEERING (SECONDARY)',
+    skills: ['React.js', 'Next.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3', 'Node.js', 'MongoDB']
   },
   {
-    category: 'STORE',
-    skills: ['PostgreSQL', 'MySQL', 'MongoDB']
+    category: 'DATABASES & STORAGE',
+    skills: ['PostgreSQL', 'MySQL', 'MongoDB', 'Relational Schemas']
   },
   {
-    category: 'TOOLS',
-    skills: ['Git', 'VS Code']
+    category: 'WORKFLOW & TOOLS',
+    skills: ['Git / GitHub', 'VS Code', 'Jupyter Notebooks']
   }
 ];
 
 export const storyItems = [
   {
     number: '01',
-    title: 'PROFILE',
-    href: '/profile',
-    description: 'A closer look at my background, mission, vision, and the DATA → INTERFACE philosophy.'
+    title: 'ANALYTICS HUB',
+    href: '/analytics',
+    description: 'Interactive Business Performance & Customer RFM analytics dashboards, SQL query explorer, and validated datasets.'
   },
   {
     number: '02',
-    title: 'EXPERIENCE',
-    href: '/work',
-    description: '1.5+ years of professional engineering & data reporting at Nilesh IT Solution.'
+    title: 'FEATURED PROJECTS',
+    href: '/projects',
+    description: 'Case studies detailing data cleaning, PostgreSQL modeling, SQL window functions, and data-driven applications.'
   },
   {
     number: '03',
-    title: 'PROJECTS',
-    href: '/projects',
-    description: 'Three analytical case studies showing how I gather, clean, analyze, visualize, and communicate data.'
+    title: 'EXPERIENCE & IMPACT',
+    href: '/work',
+    description: '1.5+ years of professional engineering experience blending data reporting, API data integration, and frontend tools.'
   },
   {
     number: '04',
-    title: 'ANALYTICS',
-    href: '/analytics',
-    description: 'My 7-stage analytical workflow and interactive technology relationship mapping.'
+    title: 'ABOUT & SKILLS',
+    href: '/profile',
+    description: 'My background in Information Technology, core Data Analytics toolkit, and DATA → INTERFACE philosophy.'
   },
   {
     number: '05',
-    title: 'CONTACT',
+    title: 'GET IN TOUCH',
     href: '/contact',
-    description: "Let's connect for recruiter opportunities, projects, or technical inquiries."
+    description: 'Connect with me for Data Analyst, BI, and Analytics opportunities or technical inquiries.'
   }
 ];

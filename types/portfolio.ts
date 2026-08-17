@@ -93,7 +93,7 @@ export interface WorkflowStep {
 }
 
 export interface ToolboxCategory {
-  category: 'ANALYZE' | 'VISUALIZE' | 'BUILD' | 'STORE' | 'TOOLS';
+  category: string;
   skills: string[];
 }
 
