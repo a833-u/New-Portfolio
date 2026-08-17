@@ -8,10 +8,10 @@ import { Download, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
-  { number: '01', name: 'Analytics Hub', href: '/analytics' },
+  { number: '01', name: 'Analytics', href: '/analytics' },
   { number: '02', name: 'Projects', href: '/projects' },
   { number: '03', name: 'Experience', href: '/work' },
-  { number: '04', name: 'About & Skills', href: '/profile' },
+  { number: '04', name: 'About', href: '/profile' },
   { number: '05', name: 'Contact', href: '/contact' },
 ];
 
