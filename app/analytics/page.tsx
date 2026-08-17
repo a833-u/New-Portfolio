@@ -5,7 +5,7 @@ import WorkflowStepper from '@/components/analytics/WorkflowStepper';
 import ToolboxGroup from '@/components/analytics/ToolboxGroup';
 import TechRelationshipGraph from '@/components/analytics/TechRelationshipGraph';
 import ScrollReveal from '@/components/ui/ScrollReveal';
-import { BookOpen, BarChart3, Cpu, ShoppingBag, TrendingUp, CheckCircle2, ArrowRight } from 'lucide-react';
+import { BookOpen, BarChart3, Cpu, CheckCircle2, ChevronRight, Layers, LayoutGrid } from 'lucide-react';
 
 // ==========================================
 // 1. BUSINESS PERFORMANCE ANALYTICS IMPORTS
@@ -82,7 +82,7 @@ export default function AnalyticsPage() {
   }, [shoppingFilters]);
 
   return (
-    <div className="space-y-10">
+    <div className="space-y-8 sm:space-y-10">
       {/* ==========================================
           ANALYTICS SHOWCASE HEADER & PROJECT SELECTOR
          ========================================== */}
@@ -91,31 +91,28 @@ export default function AnalyticsPage() {
           <div className="text-xs font-mono font-bold tracking-widest text-theme-sage uppercase">
             // ENTERPRISE DATA ANALYTICS & BI PRODUCTS
           </div>
-          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-theme-main font-sans">
+          <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-theme-main font-sans">
             Business Intelligence & Analytics Hub
           </h1>
-          <p className="text-sm text-theme-secondary max-w-3xl leading-relaxed">
+          <p className="text-xs sm:text-sm text-theme-secondary max-w-3xl leading-relaxed">
             Select an analytics project below to inspect interactive PostgreSQL dashboards, SQL explorers, data quality audits, and strategic executive recommendations.
           </p>
         </div>
 
-        {/* Side-by-Side Interactive Project Selector Cards */}
+        {/* Side-by-Side Interactive Project Selector Cards Grid / Mobile Carousel */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
           {/* PROJECT CARD 1: Business Performance Analytics */}
           <button
-            onClick={() => {
-              setSelectedProject('business-sales');
-              if (activeTab === 'methodology') setActiveTab('case-study');
-            }}
+            onClick={() => setSelectedProject('business-sales')}
             className={`p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between space-y-4 shadow-lg ${
               selectedProject === 'business-sales'
-                ? 'bg-[#071A2B] border-[#FF7A18] text-[#F5F7FA] ring-2 ring-[#FF7A18]/40 scale-[1.01]'
+                ? 'bg-[#071A2B] border-[#FF7A18] text-[#F5F7FA] ring-2 ring-[#FF7A18]/40 scale-[1.005]'
                 : 'bg-theme-surface border-theme-muted text-theme-main hover:border-theme-sage'
             }`}
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded ${
+                <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded ${
                   selectedProject === 'business-sales'
                     ? 'bg-[#FF7A18] text-[#071A2B]'
                     : 'bg-theme-muted text-theme-sage'
@@ -139,7 +136,7 @@ export default function AnalyticsPage() {
             </div>
 
             <div className="space-y-2 pt-2 border-t border-current/10">
-              <div className="flex flex-wrap gap-2 text-[11px] font-mono">
+              <div className="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] font-mono">
                 <span className="px-2 py-0.5 rounded bg-black/20 font-bold text-[#FF7A18]">₹3.37B Revenue</span>
                 <span className="px-2 py-0.5 rounded bg-black/20 text-[#35D07F]">31.41% Margin</span>
                 <span className="px-2 py-0.5 rounded bg-black/20 text-[#F5F7FA]">11 SQL Queries</span>
@@ -150,19 +147,16 @@ export default function AnalyticsPage() {
 
           {/* PROJECT CARD 2: Customer Shopping Behavior Analysis */}
           <button
-            onClick={() => {
-              setSelectedProject('customer-rfm');
-              if (activeTab === 'methodology') setActiveTab('case-study');
-            }}
+            onClick={() => setSelectedProject('customer-rfm')}
             className={`p-5 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between space-y-4 shadow-lg ${
               selectedProject === 'customer-rfm'
-                ? 'bg-[#041C1E] border-[#00E5A3] text-[#F0FDFA] ring-2 ring-[#00E5A3]/40 scale-[1.01]'
+                ? 'bg-[#041C1E] border-[#00E5A3] text-[#F0FDFA] ring-2 ring-[#00E5A3]/40 scale-[1.005]'
                 : 'bg-theme-surface border-theme-muted text-theme-main hover:border-theme-sage'
             }`}
           >
             <div className="space-y-2">
               <div className="flex items-center justify-between">
-                <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded ${
+                <span className={`text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded ${
                   selectedProject === 'customer-rfm'
                     ? 'bg-[#00E5A3] text-[#041C1E]'
                     : 'bg-theme-muted text-theme-sage'
@@ -186,7 +180,7 @@ export default function AnalyticsPage() {
             </div>
 
             <div className="space-y-2 pt-2 border-t border-current/10">
-              <div className="flex flex-wrap gap-2 text-[11px] font-mono">
+              <div className="flex flex-wrap gap-1.5 text-[10px] sm:text-[11px] font-mono">
                 <span className="px-2 py-0.5 rounded bg-black/20 font-bold text-[#00E5A3]">$233.9K Spend</span>
                 <span className="px-2 py-0.5 rounded bg-black/20 text-[#38BDF8]">54% VIP Share</span>
                 <span className="px-2 py-0.5 rounded bg-black/20 text-[#F0FDFA]">8 SQL Queries</span>
@@ -196,57 +190,64 @@ export default function AnalyticsPage() {
           </button>
         </div>
 
-        {/* View Mode Tabs (Case Study vs BI Dashboard vs Workflow) */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pt-2">
-          <div className="text-xs font-mono font-bold text-theme-main uppercase flex items-center gap-2">
-            <span>SELECTED PROJECT VIEW:</span>
-            <span className="px-2.5 py-0.5 rounded bg-theme-muted text-theme-sage">
+        {/* View Mode Tabs Header (Same width, 3 tabs for BOTH projects, mobile horizontal slider) */}
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pt-2">
+          <div className="text-xs font-mono font-bold text-theme-main uppercase flex flex-wrap items-center gap-2">
+            <span className="text-theme-secondary">// SELECTED PROJECT VIEW:</span>
+            <span className={`px-2.5 py-1 rounded font-bold transition-colors ${
+              selectedProject === 'business-sales'
+                ? 'bg-[#FF7A18]/15 text-[#FF7A18] border border-[#FF7A18]/30'
+                : 'bg-[#00E5A3]/15 text-[#00E5A3] border border-[#00E5A3]/30'
+            }`}>
               {selectedProject === 'business-sales' ? '01 · Business Performance Analytics' : '02 · Customer Shopping Behavior'}
             </span>
           </div>
 
-          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-theme-surface border border-theme-muted rounded-lg">
-            <button
-              onClick={() => setActiveTab('case-study')}
-              className={`px-3 py-1.5 rounded text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 ${
-                activeTab === 'case-study'
-                  ? selectedProject === 'business-sales'
-                    ? 'bg-[#FF7A18] text-[#071A2B] font-bold shadow-md'
-                    : 'bg-[#00E5A3] text-[#041C1E] font-bold shadow-md'
-                  : 'text-theme-secondary hover:text-theme-main'
-              }`}
-            >
-              <BookOpen className="w-3.5 h-3.5" />
-              <span>Full Case Study & SQL Explorer</span>
-            </button>
-
-            <button
-              onClick={() => setActiveTab('dashboard')}
-              className={`px-3 py-1.5 rounded text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 ${
-                activeTab === 'dashboard'
-                  ? selectedProject === 'business-sales'
-                    ? 'bg-[#FF7A18] text-[#071A2B] font-bold shadow-md'
-                    : 'bg-[#00E5A3] text-[#041C1E] font-bold shadow-md'
-                  : 'text-theme-secondary hover:text-theme-main'
-              }`}
-            >
-              <BarChart3 className="w-3.5 h-3.5" />
-              <span>Interactive BI Dashboard</span>
-            </button>
-
-            {selectedProject === 'business-sales' && (
+          {/* Sub-view Tab Container Slider / Carousel (Fixed Width & Identical 3 Tabs for Both Projects) */}
+          <div className="w-full md:w-auto overflow-x-auto custom-scrollbar pb-1 md:pb-0">
+            <div className="flex items-center gap-1.5 p-1.5 bg-theme-surface border border-theme-muted rounded-xl min-w-max">
               <button
-                onClick={() => setActiveTab('methodology')}
-                className={`px-3 py-1.5 rounded text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 ${
-                  activeTab === 'methodology'
-                    ? 'bg-[#FF7A18] text-[#071A2B] font-bold shadow-md'
-                    : 'text-theme-secondary hover:text-theme-main'
+                onClick={() => setActiveTab('case-study')}
+                className={`px-3.5 py-2 rounded-lg text-xs font-mono transition-all cursor-pointer flex items-center gap-2 whitespace-nowrap ${
+                  activeTab === 'case-study'
+                    ? selectedProject === 'business-sales'
+                      ? 'bg-[#FF7A18] text-[#071A2B] font-bold shadow-md'
+                      : 'bg-[#00E5A3] text-[#041C1E] font-bold shadow-md'
+                    : 'text-theme-secondary hover:text-theme-main hover:bg-theme-muted/50'
                 }`}
               >
-                <Cpu className="w-3.5 h-3.5" />
+                <BookOpen className="w-4 h-4 shrink-0" />
+                <span>Full Case Study & SQL Explorer</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab('dashboard')}
+                className={`px-3.5 py-2 rounded-lg text-xs font-mono transition-all cursor-pointer flex items-center gap-2 whitespace-nowrap ${
+                  activeTab === 'dashboard'
+                    ? selectedProject === 'business-sales'
+                      ? 'bg-[#FF7A18] text-[#071A2B] font-bold shadow-md'
+                      : 'bg-[#00E5A3] text-[#041C1E] font-bold shadow-md'
+                    : 'text-theme-secondary hover:text-theme-main hover:bg-theme-muted/50'
+                }`}
+              >
+                <BarChart3 className="w-4 h-4 shrink-0" />
+                <span>Interactive BI Dashboard</span>
+              </button>
+
+              <button
+                onClick={() => setActiveTab('methodology')}
+                className={`px-3.5 py-2 rounded-lg text-xs font-mono transition-all cursor-pointer flex items-center gap-2 whitespace-nowrap ${
+                  activeTab === 'methodology'
+                    ? selectedProject === 'business-sales'
+                      ? 'bg-[#FF7A18] text-[#071A2B] font-bold shadow-md'
+                      : 'bg-[#00E5A3] text-[#041C1E] font-bold shadow-md'
+                    : 'text-theme-secondary hover:text-theme-main hover:bg-theme-muted/50'
+                }`}
+              >
+                <Cpu className="w-4 h-4 shrink-0" />
                 <span>Analytical Workflow</span>
               </button>
-            )}
+            </div>
           </div>
         </div>
       </section>
@@ -295,7 +296,7 @@ export default function AnalyticsPage() {
             <div className="space-y-12 pt-2">
               <section className="space-y-2 border-b border-theme-muted pb-4">
                 <h2 className="text-xl font-bold tracking-tight text-theme-main">
-                  HOW I ANALYZE DATA
+                  HOW I ANALYZE DATA (BUSINESS PERFORMANCE ANALYTICS)
                 </h2>
                 <p className="text-xs text-theme-secondary font-mono">
                   My 7-stage analytical pipeline, tools, and technical relationship graph.
@@ -345,6 +346,29 @@ export default function AnalyticsPage() {
               <RFMDistributionChart />
               <CategorySubscriptionGrid />
               <CustomerTable filters={shoppingFilters} setFilters={setShoppingFilters} />
+            </div>
+          )}
+
+          {activeTab === 'methodology' && (
+            <div className="space-y-10 pt-2">
+              <section className="space-y-2 border-b border-theme-muted pb-4">
+                <h2 className="text-xl font-bold tracking-tight text-theme-main">
+                  RFM ANALYTICAL PIPELINE & METHODOLOGY
+                </h2>
+                <p className="text-xs text-theme-secondary font-mono">
+                  8-stage customer intelligence lifecycle, technical tools, and architecture.
+                </p>
+              </section>
+
+              <RFMPipeline />
+
+              <ScrollReveal className="space-y-4">
+                <WorkflowStepper />
+              </ScrollReveal>
+
+              <ScrollReveal>
+                <TechRelationshipGraph />
+              </ScrollReveal>
             </div>
           )}
         </>
