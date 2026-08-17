@@ -120,7 +120,31 @@ export default function CaseStudyDetail({ study }: CaseStudyDetailProps) {
             </a>
           </div>
         )}
-        {study.id === 'customer-shopping-behavior' && <ShoppingBehaviorChart />}
+        {study.id === 'customer-shopping-behavior' && (
+          <div className="space-y-4">
+            <div className="p-6 bg-[#071A2B] border border-[#102F45] rounded-lg text-center space-y-4 shadow-xl text-[#F5F7FA]">
+              <div className="space-y-1">
+                <span className="text-xs font-mono text-[#FF7A18] uppercase tracking-widest font-bold">
+                  // COMPLETE CUSTOMER ANALYTICS & RFM PRODUCT AVAILABLE
+                </span>
+                <h4 className="text-xl font-bold text-[#F5F7FA]">
+                  Customer Shopping Behavior Analytics & Dashboard
+                </h4>
+                <p className="text-xs text-[#9FB0BF] max-w-xl mx-auto font-mono">
+                  Explore 8-query SQL RFM customer segmentation, subscription LTV multipliers, Pareto revenue concentration models, and interactive BI reporting.
+                </p>
+              </div>
+
+              <a
+                href="/shopping-behavior"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF7A18] hover:bg-[#FF9A3D] text-[#071A2B] font-mono font-bold text-xs uppercase tracking-wider rounded-lg transition-all shadow-lg cursor-pointer"
+              >
+                <span>VIEW CUSTOMER DASHBOARD & SQL EXPLORER →</span>
+              </a>
+            </div>
+            <ShoppingBehaviorChart />
+          </div>
+        )}
         {study.id === 'propvista' && <PropVistaChart />}
         {study.id === 'kalakaar' && <KalakaarChart />}
       </div>
