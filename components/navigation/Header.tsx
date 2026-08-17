@@ -4,7 +4,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ThemeToggle from '@/components/ui/ThemeToggle';
-import StarBorder from '@/components/ui/StarBorder';
 import { Download, ArrowUpRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -240,18 +239,15 @@ export default function Header() {
               transition={{ duration: 0.25, delay: 0.2 }}
               className="pt-2"
             >
-              <StarBorder
-                as="a"
+              <a
                 href="/resume/Ansh_Kansara_Resume.pdf"
                 download="Ansh_Kansara_Resume.pdf"
                 onClick={handleCloseMenu}
-                speed="5s"
-                thickness={1}
-                className="w-full"
+                className="flex items-center justify-center gap-2.5 w-full text-xs font-bold text-[#F4F1EA] dark:text-[#171A17] bg-[#20231F] dark:bg-[#A8B99A] hover:opacity-95 py-3 rounded-md transition-all duration-200 active:scale-[0.98] shadow-sm cursor-pointer"
               >
                 <span>DOWNLOAD CURRICULUM VITAE</span>
-                <Download className="w-3.5 h-3.5 group-hover:translate-y-0.5 transition-transform" />
-              </StarBorder>
+                <Download className="w-3.5 h-3.5" />
+              </a>
             </motion.div>
           </motion.div>
         )}

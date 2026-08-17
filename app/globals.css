@@ -11,12 +11,6 @@
     --accent-apricot: #D98B68;
     --accent-soft: #E7EDE2;
     --muted-surface: #E9E7DF;
-
-    /* Theme-Aware Primary CTA Tokens */
-    --cta-surface: #20231F;
-    --cta-text: #F4F1EA;
-    --cta-border: #343B33;
-    --cta-accent: #7C8F73;
   }
 
   .dark {
@@ -29,12 +23,6 @@
     --accent-apricot: #E29A76;
     --accent-soft: #2A332A;
     --muted-surface: #292E28;
-
-    /* Theme-Aware Primary CTA Tokens */
-    --cta-surface: #071A2B;
-    --cta-text: #F5F7FA;
-    --cta-border: #102F45;
-    --cta-accent: #FF7A18;
   }
 
   body {
@@ -98,40 +86,6 @@
 
 .border-theme-apricot {
   border-color: var(--accent-apricot);
-}
-
-/* React Bits StarBorder Keyframe Animations */
-@keyframes star-movement-top {
-  0% {
-    transform: translate(0%, 0%);
-  }
-  100% {
-    transform: translate(100%, 100%);
-  }
-}
-
-@keyframes star-movement-bottom {
-  0% {
-    transform: translate(0%, 0%);
-  }
-  100% {
-    transform: translate(-100%, -100%);
-  }
-}
-
-.animate-star-movement-top {
-  animation: star-movement-top linear infinite;
-}
-
-.animate-star-movement-bottom {
-  animation: star-movement-bottom linear infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-star-movement-top,
-  .animate-star-movement-bottom {
-    animation: none !important;
-  }
 }
 
 /* Smooth Focus Rings & Minimal Scrollbar */

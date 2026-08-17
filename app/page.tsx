@@ -8,8 +8,7 @@ import MetricCounter from '@/components/ui/MetricCounter';
 import StatusIndicator from '@/components/ui/StatusIndicator';
 import ScrollReveal from '@/components/ui/ScrollReveal';
 import HeroAnalyticsVisual from '@/components/hero/HeroAnalyticsVisual';
-import StarBorder from '@/components/ui/StarBorder';
-import { ArrowRight, BarChart3, FileCode, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, BarChart3, Database, FileCode, CheckCircle2 } from 'lucide-react';
 
 export default function HomePage() {
   const [hoveredStory, setHoveredStory] = useState<string | null>(null);
@@ -80,14 +79,17 @@ export default function HomePage() {
 
             {/* Three-Tier CTA Strategy */}
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-3 pt-2">
-              {/* PRIMARY CTA: Explore Analytics Work with React Bits StarBorder */}
-              <StarBorder href="/analytics" speed="5s" thickness={1}>
+              {/* PRIMARY CTA: Explore Analytics Work */}
+              <Link
+                href="/analytics"
+                className="px-5 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-[#FF7A18] text-[#071A2B] hover:bg-[#FF7A18]/90 transition-all flex items-center gap-2 shadow-lg cursor-pointer"
+              >
                 <BarChart3 className="w-4 h-4 shrink-0" />
                 <span>Explore Analytics Work</span>
-                <ArrowRight className="w-4 h-4 shrink-0 group-hover:translate-x-1 transition-transform" />
-              </StarBorder>
+                <ArrowRight className="w-4 h-4 shrink-0" />
+              </Link>
 
-              {/* SECONDARY CTA: View All Projects (UNTOUCHED SECONDARY BUTTON) */}
+              {/* SECONDARY CTA: View All Projects */}
               <Link
                 href="/projects"
                 className="px-4 py-3 rounded-lg text-xs font-mono font-bold uppercase tracking-wider bg-theme-surface border border-theme-muted text-theme-main hover:border-theme-sage transition-all flex items-center gap-2 cursor-pointer"
@@ -211,10 +213,13 @@ export default function HomePage() {
           </div>
 
           <div className="pt-2">
-            <StarBorder href="/analytics" speed="5s" thickness={1}>
+            <Link
+              href="/analytics"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded bg-[#FF7A18] text-[#071A2B] font-mono text-xs font-bold hover:bg-[#FF7A18]/90 transition-colors"
+            >
               <span>Launch BI Dashboard & SQL Explorer</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </StarBorder>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </ScrollReveal>
