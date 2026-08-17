@@ -31,28 +31,28 @@ const techNodes: TechNode[] = [
     id: 'sql',
     name: 'SQL / PostgreSQL',
     category: 'core',
-    projects: ['Customer Shopping Behavior Analysis', 'PropVista — Real Estate Data Platform', 'Kalakaar — Artist & Recruiter Platform'],
+    projects: ['Business Performance Analytics', 'Customer Shopping Behavior Analysis', 'PropVista — Real Estate Data Platform'],
     description: 'Window functions, analytical aggregations, complex joins, and database queries.'
   },
   {
     id: 'react',
     name: 'React.js / Frontend',
     category: 'core',
-    projects: ['PropVista — Real Estate Data Platform', 'Kalakaar — Artist & Recruiter Platform', 'Nilesh IT Solution Experience'],
+    projects: ['Business Performance Analytics', 'PropVista — Real Estate Data Platform', 'Nilesh IT Solution Experience'],
     description: 'Building interactive UI components, state management, and D3 visualization wrappers.'
   },
   {
     id: 'powerbi-d3',
     name: 'Power BI / D3.js',
     category: 'pipeline',
-    projects: ['Customer Shopping Behavior Analysis', 'Kalakaar — Artist & Recruiter Platform', 'Nilesh IT Solution Experience'],
+    projects: ['Business Performance Analytics', 'Customer Shopping Behavior Analysis', 'Nilesh IT Solution Experience'],
     description: 'Visual encoding, interactive charts, metric reporting, and executive dashboards.'
   },
   {
     id: 'insights',
     name: 'Data Insights → Decision',
     category: 'output',
-    projects: ['Customer Shopping Behavior Analysis', 'PropVista — Real Estate Data Platform', 'Kalakaar — Artist & Recruiter Platform'],
+    projects: ['Business Performance Analytics', 'Customer Shopping Behavior Analysis', 'PropVista — Real Estate Data Platform'],
     description: 'Management recommendations, search accuracy optimization, and product roadmaps.'
   }
 ];

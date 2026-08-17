@@ -232,36 +232,6 @@ ORDER BY spend_quartile ASC;`,
     storyPipeline: ['Data Sources', 'Cleaning', 'SQL Analysis', 'Filtering Logic', 'User Interface'],
     description: 'Gathered and preprocessed property listing data from multiple backend sources, reconciling records to ensure completeness and consistency across search results displayed to 5,000+ active users. Developed SQL-driven data analysis and filtering logic, increasing search accuracy by 35% and reducing navigation time by 20 seconds per session.',
     resultSummary: 'Delivered an optimized real estate application where structured data preprocessing and fast SQL query execution directly elevated user experience metrics.'
-  },
-  {
-    id: 'kalakaar',
-    number: '03',
-    title: 'KALAKAAR — ARTIST & RECRUITER PLATFORM',
-    date: 'February 2024 – May 2025',
-    type: 'Full-Stack / Data-Driven Platform',
-    tools: ['React.js', 'Node.js', 'MongoDB', 'SQL', 'Git'],
-    question: 'How can platform engagement metrics guide feature prioritization for 10,000+ creative users?',
-    dataSummary: {
-      gathering: 'Tracked user signup cohorts, portfolio views, and recruiter inquiry logs.',
-      cleaning: 'Filtered bot telemetry and normalized activity timelines.',
-      preprocessing: 'Calculated monthly active users (MAU) and retention ratios.',
-      validation: 'Verified event tracking accuracy against server session logs.',
-      analysis: 'Correlated artist portfolio completeness with recruiter reach-out rates.'
-    },
-    cleaningSteps: {
-      missingValues: 'Ignored incomplete session telemetry',
-      duplicates: 'Deduplicated rapid fire click-stream events',
-      inconsistencies: 'Unified timezone timestamps across international users',
-      dataTypes: 'Converted timestamp strings to UTC epoch milliseconds'
-    },
-    results: [
-      { label: 'Total User Reach', value: '10,000+ Users' },
-      { label: 'Reporting Coverage', value: 'Engagement Trends & User Growth KPIs' },
-      { label: 'Strategic Alignment', value: 'Informed leadership on feature roadmap prioritization' }
-    ],
-    storyPipeline: ['User Engagement', 'Telemetry Cleaning', 'Reporting UI', 'Leadership Insights'],
-    description: 'Gathered and analyzed user engagement data across a platform serving 10,000+ users — cleaning and preprocessing metrics from multiple sources to generate reports that informed platform strategy and feature prioritization. Built data-facing reporting components that visualized engagement trends, user growth, and platform KPIs.',
-    resultSummary: 'Transformed platform telemetry into visual dashboard components that guided executive decision-making and product iteration.'
   }
 ];
 

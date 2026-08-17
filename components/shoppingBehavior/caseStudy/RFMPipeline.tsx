@@ -66,15 +66,15 @@ export default function RFMPipeline() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="space-y-6 bg-[#071A2B] border border-[#102F45] rounded-xl p-6 sm:p-8">
+    <section className="space-y-6 bg-[#041C1E] border border-[#10353B] rounded-xl p-6 sm:p-8">
       <div className="space-y-1">
-        <span className="text-xs font-mono text-[#FF7A18] uppercase tracking-widest font-semibold">
+        <span className="text-xs font-mono text-[#00E5A3] uppercase tracking-widest font-semibold">
           // RFM & CUSTOMER ANALYTICS PIPELINE
         </span>
-        <h2 className="text-xl sm:text-2xl font-bold text-[#F5F7FA]">
+        <h2 className="text-xl sm:text-2xl font-bold text-[#F0FDFA]">
           8-Stage Customer Intelligence Lifecycle
         </h2>
-        <p className="text-xs sm:text-sm text-[#9FB0BF]">
+        <p className="text-xs sm:text-sm text-[#8EAAB0]">
           Click any stage in the flow below to inspect RFM segmentation algorithms, database schemas, and retention frameworks.
         </p>
       </div>
@@ -90,19 +90,19 @@ export default function RFMPipeline() {
               onClick={() => setActiveStep(idx)}
               className={`p-3 rounded-lg border text-left transition-all cursor-pointer flex flex-col justify-between space-y-3 ${
                 isActive
-                  ? 'bg-[#102F45] border-[#FF7A18] text-[#F5F7FA] shadow-lg scale-[1.02]'
-                  : 'bg-[#0B2438] border-[#102F45] text-[#9FB0BF] hover:border-[#FF7A18]/50 hover:text-[#F5F7FA]'
+                  ? 'bg-[#10353B] border-[#00E5A3] text-[#F0FDFA] shadow-lg scale-[1.02]'
+                  : 'bg-[#0B282C] border-[#10353B] text-[#8EAAB0] hover:border-[#00E5A3]/50 hover:text-[#F0FDFA]'
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className={`text-[10px] font-mono font-bold ${isActive ? 'text-[#FF7A18]' : 'text-[#9FB0BF]'}`}>
+                <span className={`text-[10px] font-mono font-bold ${isActive ? 'text-[#00E5A3]' : 'text-[#8EAAB0]'}`}>
                   {stage.step}
                 </span>
-                <Icon className={`w-4 h-4 ${isActive ? 'text-[#FF7A18]' : 'text-[#9FB0BF]'}`} />
+                <Icon className={`w-4 h-4 ${isActive ? 'text-[#00E5A3]' : 'text-[#8EAAB0]'}`} />
               </div>
 
               <div>
-                <div className="text-xs font-bold leading-tight font-sans text-[#F5F7FA]">
+                <div className="text-xs font-bold leading-tight font-sans text-[#F0FDFA]">
                   {stage.title}
                 </div>
               </div>
@@ -112,15 +112,15 @@ export default function RFMPipeline() {
       </div>
 
       {/* Selected Stage Explanation Box */}
-      <div className="p-4 sm:p-6 bg-[#0B2438] border border-[#102F45] rounded-lg space-y-2">
-        <div className="flex items-center gap-2 text-xs font-mono text-[#FF7A18]">
+      <div className="p-4 sm:p-6 bg-[#0B282C] border border-[#10353B] rounded-lg space-y-2">
+        <div className="flex items-center gap-2 text-xs font-mono text-[#00E5A3]">
           <span>STAGE {rfmPipelineStages[activeStep].step} DETAIL:</span>
-          <span className="font-bold uppercase text-[#F5F7FA]">{rfmPipelineStages[activeStep].title}</span>
+          <span className="font-bold uppercase text-[#F0FDFA]">{rfmPipelineStages[activeStep].title}</span>
         </div>
-        <p className="text-sm font-semibold text-[#F5F7FA]">
+        <p className="text-sm font-semibold text-[#F0FDFA]">
           {rfmPipelineStages[activeStep].desc}
         </p>
-        <p className="text-xs text-[#9FB0BF] leading-relaxed font-mono">
+        <p className="text-xs text-[#8EAAB0] leading-relaxed font-mono">
           {rfmPipelineStages[activeStep].details}
         </p>
       </div>

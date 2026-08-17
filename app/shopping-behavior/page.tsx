@@ -40,7 +40,7 @@ export default function ShoppingBehaviorPage() {
       <section className="space-y-4 border-b border-theme-muted pb-4">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
           <div>
-            <div className="text-xs font-mono font-bold tracking-widest text-theme-sage uppercase">
+            <div className="text-xs font-mono font-bold tracking-widest text-[#00E5A3] uppercase">
               // CUSTOMER ANALYTICS & RFM PRODUCT
             </div>
             <h1 className="text-2xl sm:text-4xl font-bold tracking-tight text-theme-main font-sans">
@@ -49,13 +49,13 @@ export default function ShoppingBehaviorPage() {
           </div>
 
           {/* Navigation Mode Switcher */}
-          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-[#071A2B] border border-[#102F45] rounded-lg">
+          <div className="flex flex-wrap items-center gap-1.5 p-1 bg-[#041C1E] border border-[#10353B] rounded-lg">
             <button
               onClick={() => setActiveTab('case-study')}
               className={`px-3 py-1.5 rounded text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 ${
                 activeTab === 'case-study'
-                  ? 'bg-[#FF7A18] text-[#071A2B] font-bold shadow-md'
-                  : 'text-[#9FB0BF] hover:text-[#F5F7FA]'
+                  ? 'bg-[#00E5A3] text-[#041C1E] font-bold shadow-md'
+                  : 'text-[#8EAAB0] hover:text-[#F0FDFA]'
               }`}
             >
               <BookOpen className="w-3.5 h-3.5" />
@@ -66,8 +66,8 @@ export default function ShoppingBehaviorPage() {
               onClick={() => setActiveTab('dashboard')}
               className={`px-3 py-1.5 rounded text-xs font-mono transition-all cursor-pointer flex items-center gap-1.5 ${
                 activeTab === 'dashboard'
-                  ? 'bg-[#FF7A18] text-[#071A2B] font-bold shadow-md'
-                  : 'text-[#9FB0BF] hover:text-[#F5F7FA]'
+                  ? 'bg-[#00E5A3] text-[#041C1E] font-bold shadow-md'
+                  : 'text-[#8EAAB0] hover:text-[#F0FDFA]'
               }`}
             >
               <BarChart3 className="w-3.5 h-3.5" />

@@ -163,37 +163,3 @@ export function PropVistaChart() {
     </div>
   );
 }
-
-export function KalakaarChart() {
-  return (
-    <div className="p-5 bg-theme-surface border border-theme-muted rounded-sm space-y-4">
-      <div className="flex items-center justify-between border-b border-theme-muted pb-2">
-        <span className="text-xs font-mono font-bold text-theme-main">
-          KALAKAAR 10,000+ USER GROWTH & ENGAGEMENT
-        </span>
-        <span className="text-[10px] font-mono text-theme-sage uppercase">
-          Cohort Reporting
-        </span>
-      </div>
-
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center">
-        <div className="p-2.5 border border-theme-muted rounded-sm">
-          <div className="text-lg font-bold font-mono text-theme-main">10K+</div>
-          <div className="text-[10px] font-mono text-theme-secondary uppercase">Active Users</div>
-        </div>
-        <div className="p-2.5 border border-theme-muted rounded-sm">
-          <div className="text-lg font-bold font-mono text-theme-sage">4.2x</div>
-          <div className="text-[10px] font-mono text-theme-secondary uppercase">Recruiter Views</div>
-        </div>
-        <div className="p-2.5 border border-theme-muted rounded-sm">
-          <div className="text-lg font-bold font-mono text-theme-apricot">88%</div>
-          <div className="text-[10px] font-mono text-theme-secondary uppercase">Report Accuracy</div>
-        </div>
-        <div className="p-2.5 border border-theme-muted rounded-sm">
-          <div className="text-lg font-bold font-mono text-theme-main">1.5 Yrs</div>
-          <div className="text-[10px] font-mono text-theme-secondary uppercase">Data Tracking</div>
-        </div>
-      </div>
-    </div>
-  );
-}
